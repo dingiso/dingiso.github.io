@@ -25,7 +25,7 @@ The actual emission of a wave is made of different frequencies and phases, so ca
 
 How we generate specific frequency with SOC (System-on-Chip), we can use the embedded clock !!!
 
-![LoLRa](https://www.youtube.com/watch?v=eIdHBDSQHyw)
+{% include embed/youtube.html id='eIdHBDSQHyw' %}
 
 Have a look at [lolra](https://github.com/cnlohr/lolra). In this project, it shows how using either a shift register (i.e. I2S or SPI port) or an APLL (clock), you can send LoRa packets that can be decoded by commercial off the shelf LoRa gateways and other chips.
 
