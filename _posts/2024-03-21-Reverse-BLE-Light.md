@@ -9,9 +9,8 @@ pin: true
 math: true
 mermaid: true
 image:
-  path: /commons/devices-mockup.png
-  lqip: data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA
-  alt: Responsive rendering of Chirpy theme on multiple devices.
+  path: https://www.ukledlights.co.uk/wp-content/uploads/2020/03/led-strip-light-12v-blue-ip65-ukledlights.co_.uk_-1024x1024.jpg
+  alt: Bluetooth low energy Light
 ---
 
 # Reverse one BLE LED
