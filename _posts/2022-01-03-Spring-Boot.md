@@ -6,7 +6,7 @@ date: 2022-01-03 19:18:27 +0800
 categories: [Blogging, java]
 tags: [java]
 image:
-  path: /assets/img/SprintBoot.jpg
+  path: /assets/img/SpringBoot.jpg
   alt: Sprint BOOT
 ---
 
@@ -31,8 +31,6 @@ tomcat也是容器：管理的是servlet，  listener， filter等对象。
 spring：创建SomeServiceImpl,  写spring的配置文件
 
 
-
-![image-20201023090043961](images/image-20201023090043961.png)	
 
 ### 1.2 spring的地址
 
@@ -595,7 +593,6 @@ public void myAfterReturning(JoinPoint jp, Object res){
 
 使用环绕通知： 就是调用 切面类中的通知方法。
 
-![image-20201024113735575](images/image-20201024113735575.png)
 
 @Around：环绕通知
 
@@ -775,7 +772,6 @@ spring能集成很多的框架，是spring一个优势功能。 通过集成功�
 
 
 
-![image-20201024145315985](images/image-20201024145315985.png)	
 
 mappers 中使用 package 的要求
 
@@ -900,7 +896,6 @@ hibernate框架，他的事务管理器实现类： HibernateTransactionManager.
 
 事务管理器工作方式：
 
-![image-20201026102015375](images/image-20201026102015375.png)	
 
 #### 5.3.4  事务的提交和回顾的时机
 
