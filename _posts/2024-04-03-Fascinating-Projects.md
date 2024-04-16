@@ -53,3 +53,41 @@ This can be a Social Engineering tips I learned from [GIJN](https://gijn.org/sto
 8. Cross-search the “nuggets” you find in other free portals -  [**Open Ownership**](https://www.openownership.org/en/), the UK-based [**Register of Overseas Entities**](https://www.gov.uk/government/collections/register-of-overseas-entities#:~:text=Overseas entities who want to,owners or managing officers are.), and [**Tenders Electronic Daily**](https://ted.europa.eu/en/news/welcome-to-the-new-ted) (TED).
 9. Try a family connections tool to track oligarch assets - [**RuPEP**](https://rupep.org/en/)
 10. Paperwork tends to poke holes in secrecy — so keep digging.
+
+### Change the debug path in the build outputs
+
+[refix](https://github.com/yosefk/refix) use string replacement to change the absolute path in elf debug information so you can let the gdb select correct path of the source files been compiled 
+
+### Fuxnet: Ukraine Against Russian Infrastructure Malware
+
+[Claroty’s analysis](https://claroty.com/team82/research/unpacking-the-blackjack-groups-fuxnet-malware) of Fuxnet showed that the malware was likely deployed remotely. Once on a device, it would start deleting important files and directories, shutting down remote access services to prevent remote restoration, and deleting routing table information to prevent communication with other devices. Fuxnet would then delete the file system and rewrite the device’s flash memory.  
+
+Once it has corrupted the file system and blocked access to the device, the malware attempts to physically destroy the NAND memory chip and then rewrites the UBI volume to prevent rebooting.
+
+For example, config `vol_flags = PERSISTENT` in `/etc/ubi_vol.cfg`
+
+If you want further prevent reboot of device, add this in start script
+
+```shell
+echo 1 > /sys/power/pm_freezer/state
+echo 1 > /sys/power/state
+```
+
+In addition, fuxnet moves on to physically destroy the NAND memory chips on the device. In order to do so, the malware performs a bit-flip operation on entire sections of the SSD NAND chip, constantly writing and rewriting the memory, only stopping when the malware fails to write to the memory due to it being corrupted. Since the gateway uses NAND memory, which can only write and re-write data a certain number of times (known as the NAND write cycles), constantly rewriting the memory causes the chip to malfunction and be inoperable. 
+
+```c
+while(!is_stop) {
+  if (write_reseek(fd, xbuf, rz) < 0)
+    break;
+  if (write_reseek(fd, xbuf, rz) < 0)
+    break;
+  wr_amount += 2;
+  rounds +=2;
+  if (rounds >= SSD_ROUNDS) {
+    break;
+    ssd_bad_rounds = 0
+  }
+}
+```
+
+
