@@ -1,6 +1,5 @@
 ---
-title: Fascinating Projects - A Daily Endeavor
-description: Reverse engineering an Bluetooth Low Energy light from alipress
+title: Fascinating Projects - A Daily Endeavor description: Reverse engineering an Bluetooth Low Energy light from alipress
 author: dingisoul
 date: 2024-04-03 18:19:00 +0800
 categories: [Blogging, Daily]
@@ -90,4 +89,27 @@ while(!is_stop) {
 }
 ```
 
+### Self-made Python Asyncio 
+
+I came to find out that Asyncio is basically just a really nice layer on top of Python Generators.
+
+In the [article](https://jacobpadilla.com/articles/recreating-asyncio), the author create a simplified version of asyncio using just Python Generators. Then, I’m going to refactor the example to use the async and await keywords with the help of the `__await__` dunder method before coming full circle and swapping out my version for the real asyncio. By building a simple version of asyncio, hopefully, by the end of this article, you’ll be able to get a better grasp of how it does its magic!
+
+self-learning notes: 
+
+1. seen `yield` as a special return, when the function is called by `next()` not directly, the next function will check the return (yield and normal return). if there is a true `return`, it will generate a `StopIteration`. If it's a yield, it will stop at yield and remember the current program pointer and function context
+
+2. asyncio is just: generator + state machine + event loop 
+
+### [SYZYGY](https://syzygyfpga.io/)
+
+An open standard for high-performance peripheral connectivity. 
+
+* Low cost, compact, high-performance
+* connectors
+* Pin count economizes available FPGA I/O
+* Low cost cable options
+* FREE to license
+
+> My Words: It seems that this protocol is designed to hit the "sweet spot" for different peripherals, primarily in the field of FPGAs.
 
