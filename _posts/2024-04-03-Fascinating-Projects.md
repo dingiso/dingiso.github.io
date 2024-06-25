@@ -113,3 +113,6 @@ An open standard for high-performance peripheral connectivity.
 
 > My Words: It seems that this protocol is designed to hit the "sweet spot" for different peripherals, primarily in the field of FPGAs.
 
+### [CCS 16 Reviewing Process](https://www.cs.cornell.edu/andru/ccs16/report.html#/)
+
+Statistics of CCS 16 Reviewing Process 
