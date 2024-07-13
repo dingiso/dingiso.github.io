@@ -1,7 +1,7 @@
 ---
 title: Fascinating Projects - A Daily Endeavor description: Reverse engineering an Bluetooth Low Energy light from alipress
 author: dingisoul
-date: 2024-04-03 18:19:00 +0800
+date: 2024-04-04 18:19:00 +0800
 categories: [Blogging, Daily]
 tags: [Daily]
 pin: true
