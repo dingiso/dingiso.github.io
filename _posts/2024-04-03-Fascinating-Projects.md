@@ -8,7 +8,7 @@ pin: true
 math: true
 mermaid: true
 image:
-  path: /assets/img/project-preview.webp
+  path: /assets/img/project-preview.jpg
   alt: project preview
 ---
 
@@ -97,6 +97,20 @@ In the [article](https://jacobpadilla.com/articles/recreating-asyncio), the auth
 
 self-learning notes: 
 
+Q: Is function a class (such as C++ class) ? 
+
+A: Yes, function has stack to store it's state (local variables)
+
+Q: Why this is important ? 
+
+A: We need a function to **stop** and save it's state when stop, so other **thread** can run 
+
+Q: Give an example 
+
+A: a iterator through list can be seen to call multiple access and increase. So if every turn in async can be seen as one access and increase.
+
+Coding Details:
+
 1. seen `yield` as a special return, when the function is called by `next()` not directly, the next function will check the return (yield and normal return). if there is a true `return`, it will generate a `StopIteration`. If it's a yield, it will stop at yield and remember the current program pointer and function context
 
 2. asyncio is just: generator + state machine + event loop 
@@ -116,3 +130,8 @@ An open standard for high-performance peripheral connectivity.
 ### [CCS 16 Reviewing Process](https://www.cs.cornell.edu/andru/ccs16/report.html#/)
 
 Statistics of CCS 16 Reviewing Process 
+
+### Dumping Firmware from SPI flash chip 
+
+[This Blog](https://www.blackhillsinfosec.com/dumping-firmware-with-the-ch341a-programmer/) shows how to use [CH341A](https://github.com/boseji/CH341-Store) and [AsProgrammer](https://github.com/nofeletru/UsbAsp-flash/releases/) to dump the firmware from flash chip. 
+
