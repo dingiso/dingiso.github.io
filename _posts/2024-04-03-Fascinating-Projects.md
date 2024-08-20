@@ -135,3 +135,37 @@ Statistics of CCS 16 Reviewing Process
 
 [This Blog](https://www.blackhillsinfosec.com/dumping-firmware-with-the-ch341a-programmer/) shows how to use [CH341A](https://github.com/boseji/CH341-Store) and [AsProgrammer](https://github.com/nofeletru/UsbAsp-flash/releases/) to dump the firmware from flash chip. 
 
+### SQL-like Static Vulnerability Detection in Source Code
+
+Discover vulnerabilities across a codebase with [CodeQL](https://github.com/github/codeql), our industry-leading semantic code analysis engine. CodeQL lets you query code as though it were data. Write a query to find all variants of a vulnerability, eradicating it forever. Then share your query to help others do the same.
+
+CodeQL is free for research and open source.
+
+For example, fgets usage can improve the possiblity of state injection attack, so we can write a QL query to catch all fget usage.
+
+```
+import cpp
+
+predicate dangerousFunction(Function function) {
+
+exists (string name | name = function.getQualifiedName() |
+
+name = "fgets")
+
+}
+
+from FunctionCall call, Function target
+
+where call.getTarget() = target
+
+and dangerousFunction(target)
+
+select call, target.getQualifiedName() + " is potentially dangerous"
+```
+
+The finding can be displayed, for example, in `udev/udev-rules.c`
+
+![LGTM fgets](https://nimg.ws.126.net/?url=http%3A%2F%2Fspider.ws.126.net%2F0e47243d81bd481000f825cede575c81.png&thumbnail=660x2147483647&quality=80&type=jpg) 
+
+CodeQL can be used in advanced use case, for example, with data flow.
+
