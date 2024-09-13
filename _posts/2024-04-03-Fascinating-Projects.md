@@ -1,5 +1,5 @@
 ---
-title: Fascinating Projects - A Daily Endeavor description: Reverse engineering an Bluetooth Low Energy light from alipress
+title: Fascinating Projects - A Daily Endeavor description
 author: dingisoul
 date: 2024-04-04 18:19:00 +0800
 categories: [Blogging, Daily]
@@ -169,3 +169,11 @@ The finding can be displayed, for example, in `udev/udev-rules.c`
 
 CodeQL can be used in advanced use case, for example, with data flow.
 
+### [Python's Preprocessor](https://pydong.org/posts/PythonsPreprocessor/)
+
+Python has internal preprocessors to decode source codes, you can define your own grammar with that.
+
+There are several projects using it:
+
+1. [incdec.py](https://github.com/dankeyy/incdec.py) : bring "++" and "--" into python
+2. [Bython](https://github.com/mathialo/bython) : python with braces 
