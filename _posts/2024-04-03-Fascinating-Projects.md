@@ -177,3 +177,28 @@ There are several projects using it:
 
 1. [incdec.py](https://github.com/dankeyy/incdec.py) : bring "++" and "--" into python
 2. [Bython](https://github.com/mathialo/bython) : python with braces 
+
+### [Advice to infant programmers](https://mbuffett.com/posts/programming-advice-younger-self/)
+
+Ths is not a project, but advices provided by a CTO
+
+1. If you (or your team) are shooting yourselves in the foot constantly, fix the gun
+2. Assess the trade-off you’re making between quality and pace, make sure it’s appropriate for your context
+3. Spending time sharpening the axe is almost always worth it
+4. If you can’t easily explain why something is difficult, then it’s incidental complexity, which is probably worth addressing
+5. Try to solve bugs one layer deeper
+6. Don’t underestimate the value of digging into history to investigate some bugs
+7. Bad code gives you feedback, perfect code doesn’t. Err on the side of writing bad code
+8. Make debugging easier
+9. When working on a team, you should usually ask the question
+10. Shipping cadence matters a lot. Think hard about what will get you shipping quickly and often
+
+### [LTESniffer](https://github.com/SysSec-KAIST/LTESniffer)
+
+**LTESniffer** is An Open-source LTE Downlink/Uplink Eavesdropper
+
+It first decodes the Physical Downlink Control Channel (PDCCH) to obtain the Downlink Control Informations (DCIs) and Radio Network Temporary Identifiers (RNTIs) of all active users. Using decoded DCIs and RNTIs, LTESniffer further decodes the Physical Downlink Shared Channel (PDSCH) and Physical Uplink Shared Channel (PUSCH) to retrieve uplink and downlink data traffic. LTESniffer supports an API with three functions for security applications and research. Many LTE security research assumes a passive sniffer that can capture privacy-related packets on the air. However, non of the current open-source sniffers satisfy their requirements as they cannot decode protocol packets in PDSCH and PUSCH. We developed a proof-of-concept security API that supports three tasks that were proposed by previous works: 1) Identity mapping, 2) IMSI collecting, and 3) Capability profiling. Please refer to our [paper](https://syssec.kaist.ac.kr/pub/2023/wisec2023_tuan.pdf) for more details.
+
+### [Firefox Password Decryptor](https://github.com/Sohimaster/Firefox-Passwords-Decryptor)
+
+This tool is primarily designed for decrypting and extracting passwords stored in Firefox, offering an in-depth look into the security of saved credentials. It provides additional reconnaissance capabilities such as system info, open ports info, devices info, and Firefox browsing history extraction.
